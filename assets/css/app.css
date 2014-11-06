@@ -1,0 +1,358 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'et';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg#et") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body {
+  font-family: 'Open Sans';
+  font-size: 100%;
+  height: 100%;
+  width: 100%; }
+
+body {
+  color: #000; }
+
+h1, h2, h3, h4, p, li, a {
+  position: relative; }
+
+h1, h2, h3 {
+  font: 2.5em "Lato"; }
+
+h1 {
+  font-size: 1.5em; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 2em; } }
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 2.5em; } }
+
+a {
+  color: #2f2f2f; }
+
+.btn {
+  background: #2980b9;
+  border: 2px solid #2980b9;
+  border-radius: 2px;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin: 2% 0;
+  padding: 16px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (min-width: 768px) {
+    .btn {
+      font-size: 0.8125em; } }
+  .btn span {
+    font-size: 1.1em;
+    margin-left: 7px; }
+  .btn:hover {
+    background-color: transparent;
+    border: 2px solid #2980b9;
+    color: #2980b9; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+nav {
+  left: 0;
+  padding: .5% 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s; }
+  nav button {
+    background: none;
+    border: none;
+    color: #fff;
+    display: block;
+    float: right;
+    font: 1.8em/1em 'et';
+    opacity: 0; }
+    @media screen and (min-width: 1100px) {
+      nav button {
+        opacity: .8; } }
+    @media screen and (min-width: 1100px) {
+      nav button:hover {
+        opacity: 1; } }
+
+header, section, footer {
+  display: block;
+  width: 100%; }
+
+header {
+  font-size: 1.5em;
+  height: 100%;
+  left: 0;
+  line-height: 1em;
+  min-height: 500px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  z-index: 0; }
+  @media screen and (min-width: 768px) {
+    header:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+      /* Adjusts for spacing */ } }
+  header .down {
+    bottom: 10%;
+    cursor: pointer;
+    left: 50%;
+    margin-left: -25px;
+    opacity: 0;
+    position: absolute;
+    font: 1.2em 'et';
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    header .down:hover {
+      color: #555; }
+    header .down.top {
+      bottom: 8%;
+      opacity: 1; }
+    header .down.hidden {
+      bottom: 12%;
+      opacity: 0; }
+  header div {
+    position: relative;
+    top: 19%;
+    padding: 0 4%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+    @media screen and (min-width: 768px) {
+      header div {
+        display: inline-block;
+        opacity: 0;
+        padding: 0;
+        top: 20px; } }
+    header div.top {
+      opacity: 1;
+      top: 21%; }
+      @media screen and (min-width: 768px) {
+        header div.top {
+          top: 40px; } }
+  header h1 span {
+    letter-spacing: 14px;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+  header h1 span:first-child {
+    display: block;
+    font: 2.5em/.7em 'et'; }
+  header.hidden div {
+    top: 80px; }
+    header.hidden div span:last-child {
+      opacity: 0; }
+  header.footer .top {
+    top: -40px; }
+
+.wrapper {
+  margin-top: 198%;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0); }
+  .wrapper:before, .wrapper:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    left: 0;
+    height: 100px;
+    box-shadow: inset 0 -48px 50px rgba(255, 255, 255, 0.9); }
+  .wrapper:after {
+    bottom: -100px;
+    box-shadow: inset 0 48px 50px rgba(255, 255, 255, 0.9);
+    top: auto; }
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      margin-top: 130%; } }
+  @media screen and (min-width: 1024px) {
+    .wrapper {
+      margin-top: 76%; } }
+
+section {
+  font-size: 1.1em;
+  overflow: hidden;
+  padding: 15% 4%;
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 6% 4%; } }
+  section span {
+    position: relative; }
+  section div {
+    margin: 0 auto;
+    padding: 1% 0; }
+    @media screen and (min-width: 768px) {
+      section div {
+        width: 85%; } }
+  section h2 {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    margin-top: 10%; }
+  section strong {
+    display: block;
+    font-size: .8em;
+    margin-bottom: 3%; }
+  section em {
+    display: block;
+    font-size: .85em;
+    margin: 0 8% 0 0; }
+    @media screen and (min-width: 768px) {
+      section em {
+        border-left: 4px solid #fff;
+        margin: 0 8% 0 0; } }
+  section img {
+    float: right;
+    margin-right: 1%;
+    padding: 2%;
+    margin-top: 27%;
+    width: 39%; }
+    @media screen and (min-width: 768px) {
+      section img {
+        margin-top: 0;
+        width: auto; } }
+  section .case-info {
+    float: left;
+    width: 60%; }
+    @media screen and (min-width: 768px) {
+      section .case-info {
+        float: none;
+        width: auto; } }
+  section .btn {
+    margin-top: 6%; }
+
+.bg {
+  background-color: #fff;
+  height: 100%;
+  left: 0;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0; }
+
+@media screen and (min-width: 768px) {
+  #conexess img {
+    margin: 0 0 0 10%;
+    width: 40%; } }
+
+#naacc img {
+  margin-top: 0;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #naacc img {
+      float: left;
+      margin: 10% 6% 10% 0;
+      max-width: 54%;
+      width: auto; } }
+#naacc span div div {
+  float: left;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    #naacc span div div {
+      width: 40%; } }
+#naacc em {
+  margin: 6% 17% 6% 1%; }
+
+.last {
+  margin-bottom: 70%; }
+  @media screen and (min-width: 768px) {
+    .last {
+      margin-bottom: 50%; } }
+  .last span div div {
+    float: left;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .last span div div {
+        width: 40%; } }
+  .last h2 {
+    margin-top: 4%; }
+  .last img {
+    margin-top: 0;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .last img {
+        margin: 7% 0 7% 4%;
+        width: 56%; } }
+
+footer {
+  background: url(../img/bg.png);
+  font-size: 1.1em;
+  overflow: hidden;
+  padding: 0 5% 50%;
+  position: relative;
+  text-align: center; }
+  @media screen and (min-width: 500px) {
+    footer {
+      padding: 0 7% 35%; } }
+  @media screen and (min-width: 768px) {
+    footer {
+      padding: 0 16% 11%; } }
+  @media screen and (min-width: 1024px) {
+    footer {
+      padding: 0 20% 11%; } }
+  @media screen and (max-height: 620px) and (min-width: 320px) {
+    footer {
+      padding-bottom: 27%; } }
+  @media screen and (max-height: 620px) and (min-width: 480px) {
+    footer {
+      padding-bottom: 20%; } }
+  @media screen and (max-height: 620px) and (min-width: 768px) {
+    footer {
+      padding-bottom: 7%; } }
+  @media screen and (max-height: 620px) and (min-width: 1024px) {
+    footer {
+      padding-bottom: 5%; } }
+  footer .btn {
+    display: inline-block;
+    float: none; }
+  footer p span {
+    font: 3em 'et'; }
+  footer .btn span {
+    font: 1em 'et';
+    position: relative;
+    text-transform: lowercase;
+    top: 1px; }
+
+.resume header h1, .resume header h2 {
+  margin: 0; }
+.resume header h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.3em; }
+.resume header h2 {
+  font-size: 1.1em;
+  text-transform: none; }
+.resume h2 {
+  text-transform: uppercase; }
+.resume h3 {
+  font-size: 1.8em; }
+.resume h4 {
+  margin-top: 2em; }
+.resume section.last {
+  margin-bottom: 91%; }

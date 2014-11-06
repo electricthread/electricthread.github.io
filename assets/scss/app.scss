@@ -1,0 +1,441 @@
+@import "bourbon";
+@import "neat/neat";
+
+$blue:#2980b9;
+$ltblue:#47a4fb;
+
+// Define your breakpoints
+// Mobile First
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width 1024px 12);
+$bigdesk: new-breakpoint(min-width 1100px 12);
+
+// Mobile Only
+$mobile: new-breakpoint(max-width 768px 8);
+
+@mixin tablet {
+  @include media($tablet) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @include media($desktop) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: 'et';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg#et') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin btn {
+  background: $blue;
+  border:2px solid $blue;
+  border-radius:2px;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: em(12);
+  font-weight: 700;
+  margin: 2% 0;
+  padding: 16px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include transition (all .3s);
+  @include tablet {
+    font-size: em(13);
+  }
+  span {
+    font-size: 1.1em;
+    margin-left:7px;
+  }
+  &:hover {
+    background-color:transparent;
+    border:2px solid $blue;
+    color: $blue;
+  }
+}
+
+html, body {
+  font-family: 'Open Sans';
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: #000;
+}
+h1, h2, h3, h4, p, li, a {
+  position: relative;
+}
+h1, h2, h3 {
+  font: 2.5em "Lato";
+}
+h1 {
+  font-size: 1.5em;
+  @include tablet {
+    font-size: 2em;
+  }
+  @include desk {
+    font-size: 2.5em;
+  }
+}
+a {
+  color: #2f2f2f;
+}
+.btn {
+  @include btn;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+nav {
+  left: 0;
+  padding:.5% 10%;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 2;
+  @include transition(all .5s);
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    display: block;
+    float: right;
+    font: 1.8em/1em 'et';
+    opacity: 0;
+    @media screen and (min-width: 1100px) {
+      opacity: .8;
+    }
+    &:hover {
+      @media screen and (min-width: 1100px) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+header, section, footer {
+  display: block;
+  width: 100%;
+}
+header {
+  font-size: 1.5em;
+  height: 100%;
+  left: 0;
+  line-height: 1em;
+  min-height: 500px;
+  position: fixed;
+  text-align: center;
+  top:0;
+  z-index: 0;
+  &:before {
+    @include tablet {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
+  }
+  .down {
+    bottom:10%;
+    cursor: pointer;
+    left: 50%;
+    margin-left: -25px;
+    opacity: 0;
+    position: absolute;
+    font: 1.2em 'et';
+    @include transition(all 1s);
+    &:hover {
+      color: #555;
+    }
+    &.top {
+      bottom:8%;
+      opacity: 1;
+    }
+    &.hidden {
+      bottom:12%;
+      opacity: 0;
+    }
+  }
+  div {
+    position: relative;
+    top: 19%;
+    padding:0 4%;
+    @include tablet {
+      display: inline-block;
+      opacity: 0;
+      padding:0;
+      top:20px;
+    }
+    @include transition(all .5s);
+    &.top {
+      opacity: 1;
+      top:21%;
+      @include tablet {
+        top: 40px;
+      }
+    }
+  }
+  h1 {
+    span {
+      letter-spacing: 14px;
+      position: relative;
+      @include transition(all .5s);
+    }
+    span:first-child {
+      display: block;
+      font: 2.5em/.7em 'et';
+    }
+  }
+  &.hidden {
+    div {
+      top:80px;
+      span:last-child {
+        opacity: 0;
+      }
+    }
+  }
+  &.footer {
+    .top {
+      top:-40px;
+    }
+  }
+}
+.wrapper {
+  &:before, &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    left: 0;
+    height: 100px;
+    box-shadow: inset 0 -48px 50px rgba(255,255,255, 0.9);
+  }
+  &:after {
+    bottom:-100px;
+    box-shadow: inset 0 48px 50px rgba(255,255,255, 0.9);
+    top:auto;
+  }
+  margin-top: 198%;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate3d(0,0,0);
+  @include tablet {
+    margin-top: 130%;
+  }
+  @include desk {
+    margin-top: 76%;
+  }
+}
+section {
+  font-size: 1.1em;
+  overflow: hidden;
+  padding:15% 4%;
+  position: relative;
+  @include tablet {
+    padding:6% 4%;
+  }
+  span {
+    position: relative;
+  }
+  div {
+    margin: 0 auto;
+    padding: 1% 0;
+    @include tablet {
+      width: 85%;
+    }
+  }
+  h2 {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    margin-top: 10%;
+  }
+  strong {
+    display: block;
+    font-size: .8em;
+    margin-bottom:3%;
+  }
+  em {
+    display: block;
+    font-size: .85em;
+    margin: 0 8% 0 0;
+    @include tablet {
+      border-left: 4px solid #fff;
+      margin: 0 8% 0 0;
+    }
+  }
+  img {
+    float: right;
+    margin-right: 1%;
+    padding: 2%;
+    margin-top: 27%;
+    width: 39%;
+    @include tablet {
+      margin-top: 0;
+      width: auto;
+    }
+  }
+  .case-info {
+    float: left;
+    width: 60%;
+    @include tablet {
+      float: none;
+      width: auto;
+    }
+  }
+  .btn {
+    margin-top: 6%;
+  }
+}
+.bg {
+  background-color:#fff;
+  height: 100%;
+  left: 0;
+  opacity: .9;
+  position: absolute;
+  top:0;
+  width: 100%;
+  z-index: 0;
+}
+#conexess {
+  img {
+    @include tablet {
+      margin: 0 0 0 10%;
+      width: 40%;
+    }
+  }
+}
+#naacc {
+  img {
+    margin-top: 0;
+    width: 100%;
+    @include tablet {
+      float: left;
+      margin: 10% 6% 10% 0;
+      max-width: 54%;
+      width: auto;
+    }
+  }
+  span div div {
+    float: left;
+    width: 100%;
+    @include tablet {
+      width: 40%;
+    }
+  }
+  em {
+    margin: 6% 17% 6% 1%;
+  }
+}
+.last {
+  margin-bottom: 70%;
+  @include tablet {
+    margin-bottom: 50%;
+  }
+  span div div {
+    float: left;
+    width: 100%;
+    @include tablet {
+      width: 40%;
+    }
+  }
+  h2 {
+    margin-top: 4%;
+  }
+  img {
+    margin-top: 0;
+    width: 100%;
+    @include tablet {
+      margin:7% 0 7% 4%;
+      width: 56%;
+    }
+  }
+}
+footer {
+  background: url(../img/bg.png);
+  font-size: 1.1em;
+  overflow: hidden;
+  padding: 0 5% 50%;
+  position: relative;
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    padding:0 7% 35%;
+  }
+  @include tablet {
+    padding:0 16% 11%;
+  }
+  @include desk {
+    padding:0 20% 11%;
+  }
+  @media screen and (max-height: 620px) and (min-width: 320px) {
+    padding-bottom:27%;
+  }
+  @media screen and (max-height: 620px) and (min-width: 480px) {
+    padding-bottom:20%;
+  }
+  @media screen and (max-height: 620px) and (min-width: 768px) {
+    padding-bottom:7%;
+  }
+  @media screen and (max-height: 620px) and (min-width: 1024px) {
+    padding-bottom:5%;
+  }
+  .btn {
+    display: inline-block;
+    float: none;
+  }
+  p span {
+    font: 3em 'et';
+  }
+  .btn {
+    span {
+      font: 1em 'et';
+      position: relative;
+      text-transform: lowercase;
+      top: 1px;
+    }
+  }
+}
+
+// Resume
+.resume {
+  header {
+    h1, h2 {
+      margin: 0;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 1.1em;
+      text-transform: none;
+    }
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  h4 {
+    margin-top: 2em;
+  }
+  section.last {
+    margin-bottom: 91%;
+  }
+}
