@@ -4,7 +4,7 @@ email: evan@electricthread.com
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and the styles/scripts directories.
-exclude: ['node_modules', 'styles', 'scripts', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+exclude: ['node_modules']
 
 # Default post path style
 # date  /:categories/:year/:month/:day/:title.html
