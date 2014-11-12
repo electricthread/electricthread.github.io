@@ -1,0 +1,22 @@
+// Define your breakpoints
+// Mobile First
+$tablet: new-breakpoint(min-width 768px 12);
+$desktop: new-breakpoint(min-width 1024px 12);
+$bigdesk: new-breakpoint(min-width 1100px 12);
+
+// Mobile Only
+$mobile: new-breakpoint(max-width 768px 8);
+
+@mixin tablet {
+
+  @include media($tablet) {
+    @content;
+  }
+}
+
+@mixin desk {
+
+  @include media($desktop) {
+    @content;
+  }
+}

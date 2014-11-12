@@ -1,98 +1,11 @@
-@import "bourbon";
-@import "neat/neat";
-
-$blue:#2980b9;
-$ltblue:#47a4fb;
-
-// Define your breakpoints
-// Mobile First
-$tablet: new-breakpoint(min-width 768px 12);
-$desktop: new-breakpoint(min-width 1024px 12);
-$bigdesk: new-breakpoint(min-width 1100px 12);
-
-// Mobile Only
-$mobile: new-breakpoint(max-width 768px 8);
-
-@mixin tablet {
-  @include media($tablet) {
-    @content;
-  }
-}
-
-@mixin desk {
-  @include media($desktop) {
-    @content;
-  }
-}
-
-@font-face {
-  font-family: 'et';
-  src:url('../fonts/icomoon.eot');
-  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf') format('truetype'),
-    url('../fonts/icomoon.woff') format('woff'),
-    url('../fonts/icomoon.svg#et') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin btn {
-  background: $blue;
-  border:2px solid $blue;
-  border-radius:2px;
-  color: #fff;
-  display: block;
-  float: left;
-  font-size: em(12);
-  font-weight: 700;
-  margin: 2% 0;
-  padding: 16px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  @include transition (all .3s);
-  @include tablet {
-    font-size: em(13);
-  }
-  span {
-    font-size: 1.1em;
-    margin-left:7px;
-  }
-  &:hover {
-    background-color:transparent;
-    border:2px solid $blue;
-    color: $blue;
-  }
-}
-
-html, body {
-  font-family: 'Open Sans';
-  font-size: 100%;
-  height: 100%;
-  width: 100%;
-}
 body {
   color: #000;
 }
 h1, h2, h3, h4, p, li, a {
   position: relative;
 }
-h1, h2, h3 {
-  font: 2.5em "Lato";
-}
-h1 {
-  font-size: 1.5em;
-  @include tablet {
-    font-size: 2em;
-  }
-  @include desk {
-    font-size: 2.5em;
-  }
-}
 a {
   color: #2f2f2f;
-}
-.btn {
-  @include btn;
 }
 img {
   height: auto;
@@ -437,7 +350,7 @@ footer {
     }
   }
   .wrapper {
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .bg {
     opacity: 1;
