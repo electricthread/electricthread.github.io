@@ -1,4 +1,4 @@
-@import "bourbon";
+@import "bourbon/bourbon";
 @import "neat/neat";
 
 $blue:#2980b9;
@@ -93,6 +93,11 @@ a {
 }
 .btn {
   @include btn;
+}
+a.btn.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff;
 }
 img {
   height: auto;
@@ -311,6 +316,9 @@ section {
   top:0;
   width: 100%;
   z-index: 0;
+}
+#sc4 img {
+  width: 52%;
 }
 #conexess {
   img {

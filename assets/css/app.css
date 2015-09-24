@@ -9,7 +9,6 @@
   src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg#et") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 html, body {
   font-family: 'Open Sans';
   font-size: 100%;
@@ -63,6 +62,11 @@ a {
     background-color: transparent;
     border: 2px solid #2980b9;
     color: #2980b9; }
+
+a.btn.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #fff; }
 
 img {
   height: auto;
@@ -257,6 +261,9 @@ section {
   width: 100%;
   z-index: 0; }
 
+#sc4 img {
+  width: 52%; }
+
 @media screen and (min-width: 768px) {
   #conexess img {
     margin: 0 0 0 10%;
@@ -366,3 +373,5 @@ footer {
   margin-top: 2em; }
 .resume section.last {
   margin-bottom: 91%; }
+
+/*# sourceMappingURL=app.css.map */
