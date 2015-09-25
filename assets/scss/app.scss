@@ -317,9 +317,6 @@ section {
   width: 100%;
   z-index: 0;
 }
-#sc4 img {
-  width: 52%;
-}
 #conexess {
   img {
     @include tablet {
@@ -328,10 +325,20 @@ section {
     }
   }
 }
+#naacc,
+#restcc,
+#sc4 {
+	img {
+		margin-top: 0;
+    width: 100%;
+
+    @include tablet {
+    	margin-top: 11%;
+    }
+	}
+}
 #naacc {
   img {
-    margin-top: 0;
-    width: 100%;
     @include tablet {
       float: left;
       margin: 10% 6% 10% 0;
@@ -349,6 +356,18 @@ section {
   em {
     margin: 6% 17% 6% 1%;
   }
+}
+#restcc img {
+	@include tablet {
+	  float: left;
+	  margin-right: 8%;
+	  width: 44%;
+	}
+}
+#sc4 img {
+	@include tablet {
+	  width: 52%;
+	}
 }
 .last {
   margin-bottom: 70%;

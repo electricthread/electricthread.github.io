@@ -261,23 +261,28 @@ section {
   width: 100%;
   z-index: 0; }
 
-#sc4 img {
-  width: 52%; }
-
 @media screen and (min-width: 768px) {
   #conexess img {
     margin: 0 0 0 10%;
     width: 40%; } }
 
-#naacc img {
+#naacc img,
+#restcc img,
+#sc4 img {
   margin-top: 0;
   width: 100%; }
   @media screen and (min-width: 768px) {
-    #naacc img {
-      float: left;
-      margin: 10% 6% 10% 0;
-      max-width: 54%;
-      width: auto; } }
+    #naacc img,
+    #restcc img,
+    #sc4 img {
+      margin-top: 11%; } }
+
+@media screen and (min-width: 768px) {
+  #naacc img {
+    float: left;
+    margin: 10% 6% 10% 0;
+    max-width: 54%;
+    width: auto; } }
 #naacc span div div {
   float: left;
   width: 100%; }
@@ -286,6 +291,16 @@ section {
       width: 40%; } }
 #naacc em {
   margin: 6% 17% 6% 1%; }
+
+@media screen and (min-width: 768px) {
+  #restcc img {
+    float: left;
+    margin-right: 8%;
+    width: 44%; } }
+
+@media screen and (min-width: 768px) {
+  #sc4 img {
+    width: 52%; } }
 
 .last {
   margin-bottom: 70%; }
