@@ -394,20 +394,20 @@ section {
   }
 }
 footer {
-  background: url(../img/bg.png);
+  background:rgba(255,255,255,.95);
   font-size: 1.1em;
   overflow: hidden;
-  padding: 0 5% 50%;
+  padding: 0 5% 75px;
   position: relative;
   text-align: center;
-  @media screen and (min-width: 500px) {
-    padding:0 7% 35%;
+  @media screen and (min-width: 550px) {
+    padding-bottom:40px;
   }
   @include tablet {
-    padding:0 16% 11%;
+    padding:0 15% 0;
   }
   @include desk {
-    padding:0 20% 11%;
+    padding:0 20% 0;
   }
   @media screen and (max-height: 620px) and (min-width: 320px) {
     padding-bottom:27%;
@@ -421,9 +421,27 @@ footer {
   @media screen and (max-height: 620px) and (min-width: 1024px) {
     padding-bottom:5%;
   }
+  img {
+    width: 32%;
+
+    @include tablet {
+    	float: left;
+    	margin:1em 8% 150px 0;
+    	width: 24%;
+    }
+	}
+	p {
+		@include tablet {
+			text-align: left;
+		}
+	}
   .btn {
     display: inline-block;
     float: none;
+
+    @include tablet {
+    	float:left;
+    }
   }
   p span {
     font: 3em 'et';
@@ -480,5 +498,9 @@ footer {
   }
   section.last {
     margin-bottom: 91%;
+
+    @include desk {
+    	margin-bottom: 64%;
+    }
   }
 }
