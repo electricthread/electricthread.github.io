@@ -503,4 +503,16 @@ footer {
     	margin-bottom: 64%;
     }
   }
+  footer {
+  	@include tablet {
+	  	padding-bottom:15%;
+	  }
+	  @include desk {
+	  	padding-bottom:10%;	
+	  }
+
+  	p {
+	  	text-align: center;
+	  }
+  }
 }

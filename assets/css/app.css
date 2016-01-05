@@ -404,5 +404,13 @@ footer {
   @media screen and (min-width: 1024px) {
     .resume section.last {
       margin-bottom: 64%; } }
+@media screen and (min-width: 768px) {
+  .resume footer {
+    padding-bottom: 15%; } }
+@media screen and (min-width: 1024px) {
+  .resume footer {
+    padding-bottom: 10%; } }
+.resume footer p {
+  text-align: center; }
 
 /*# sourceMappingURL=app.css.map */
