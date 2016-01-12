@@ -374,6 +374,9 @@ section {
   @include tablet {
     margin-bottom: 50%;
   }
+  @include desk {
+  	margin-bottom: 54%;
+  }
   span div div {
     float: left;
     width: 100%;
@@ -422,6 +425,9 @@ footer {
     padding-bottom:5%;
   }
   img {
+    border: 3px solid rgba(47, 47, 47, 0.23);
+    border-radius: 100px;
+    max-width: 200px;
     width: 32%;
 
     @include tablet {
@@ -459,6 +465,13 @@ footer {
 // Resume
 .resume {
   header {
+  	@media print {
+  		height: auto;
+  		min-height: 200px;
+  		padding:4% 4% 0;
+  		position: static;
+		  text-align: left;
+		}
     h1, h2 {
       margin: 0;
     }
@@ -480,9 +493,26 @@ footer {
         }
       }
     }
+    .down {
+    	@media print {
+      	display: none;
+      }
+    }
   }
   .wrapper {
     background-color: #fff;
+    @media print {
+    	margin-top: 0;
+    }
+
+    &:before, &:after {
+    	display: none;
+    }
+  }
+  section {
+  	@media print {
+  		padding:0 4%;
+  	}
   }
   .bg {
     opacity: 1;
@@ -502,6 +532,10 @@ footer {
     @include desk {
     	margin-bottom: 64%;
     }
+
+    @media print {
+    	margin-bottom: 4%;
+    }
   }
   footer {
   	@include tablet {
@@ -510,9 +544,16 @@ footer {
 	  @include desk {
 	  	padding-bottom:10%;	
 	  }
+	  @media print {
+	  	background-color:transparent;
+	  }
 
   	p {
 	  	text-align: center;
+
+	  	@media print {
+	  		text-align: left;
+	  	}
 	  }
   }
 }

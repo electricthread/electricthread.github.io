@@ -307,6 +307,9 @@ section {
   @media screen and (min-width: 768px) {
     .last {
       margin-bottom: 50%; } }
+  @media screen and (min-width: 1024px) {
+    .last {
+      margin-bottom: 54%; } }
   .last span div div {
     float: left;
     width: 100%; }
@@ -352,6 +355,9 @@ footer {
     footer {
       padding-bottom: 5%; } }
   footer img {
+    border: 3px solid rgba(47, 47, 47, 0.23);
+    border-radius: 100px;
+    max-width: 200px;
     width: 32%; }
     @media screen and (min-width: 768px) {
       footer img {
@@ -375,6 +381,13 @@ footer {
     text-transform: lowercase;
     top: 1px; }
 
+@media print {
+  .resume header {
+    height: auto;
+    min-height: 200px;
+    padding: 4% 4% 0;
+    position: static;
+    text-align: left; } }
 .resume header h1, .resume header h2 {
   margin: 0; }
 .resume header h1 {
@@ -389,8 +402,19 @@ footer {
 @media screen and (min-width: 768px) {
   .resume header div.top {
     top: 20px; } }
+@media print {
+  .resume header .down {
+    display: none; } }
 .resume .wrapper {
   background-color: #fff; }
+  @media print {
+    .resume .wrapper {
+      margin-top: 0; } }
+  .resume .wrapper:before, .resume .wrapper:after {
+    display: none; }
+@media print {
+  .resume section {
+    padding: 0 4%; } }
 .resume .bg {
   opacity: 1; }
 .resume h2 {
@@ -404,13 +428,22 @@ footer {
   @media screen and (min-width: 1024px) {
     .resume section.last {
       margin-bottom: 64%; } }
+  @media print {
+    .resume section.last {
+      margin-bottom: 4%; } }
 @media screen and (min-width: 768px) {
   .resume footer {
     padding-bottom: 15%; } }
 @media screen and (min-width: 1024px) {
   .resume footer {
     padding-bottom: 10%; } }
+@media print {
+  .resume footer {
+    background-color: transparent; } }
 .resume footer p {
   text-align: center; }
+  @media print {
+    .resume footer p {
+      text-align: left; } }
 
 /*# sourceMappingURL=app.css.map */
